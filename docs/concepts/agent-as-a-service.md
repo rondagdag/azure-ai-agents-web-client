@@ -51,17 +51,17 @@ Agent as a Service represents a paradigm shift in how we deploy and utilize AI a
 
 ## What Exactly is AaaS?
 
-AaaS leverages AI agents capable of performing tasks independently, without human oversight. These agents use machine learning and natural language processing (NLP) to respond to user requests, automate complex workflows, and improve operational efficiency. Similar to SaaS, AaaS relies on cloud-based delivery, making it scalable and accessible for businesses of any size.
+AaaS leverages AI agents capable of performing tasks independently. These agents use machine learning and natural language processing (NLP) to respond to user requests, automate complex workflows, and improve operational efficiency. For newcomers, machine learning refers to algorithms that learn patterns from data, while NLP (Natural Language Processing) enables agents to understand and generate human language. Similar to SaaS, AaaS relies on cloud-based delivery, making it scalable and accessible for businesses of any size.
 
 ### The Anatomy of an AI Agent
 
 To understand AaaS, it helps to know what makes up an AI agent:
 
 - **Reasoning Engine**: Powered by large language models (LLMs), this is the brain that processes inputs and makes decisions.
-- **Knowledge Base**: A repository of data that the agent pulls from to complete tasks.
-- **Memory**: Short-term memory that helps agents manage ongoing conversations or tasks.
-- **Tools and Actions**: External APIs or software that agents use to execute tasks.
-- **Planning Module**: Breaks down high-level goals into manageable steps.
+- **Knowledge Base**: A repository of data (similar to an organized database) that the agent pulls from to complete tasks.
+- **Memory**: Short-term memory that helps agents manage ongoing conversations or tasks (comparable to session storage in Azure Functions).
+- **Tools and Actions**: External APIs or software that agents use to execute tasks (much like invoking Azure Function Apps for specific operations).
+- **Planning Module**: Breaks down high-level goals into manageable steps (comparable to task orchestrators like Azure Logic Apps).
 
 ## What Makes AaaS Different?
 
@@ -89,7 +89,7 @@ These agents can:
 1. **Message-Driven Core**
    - Message-based agent activation
    - Asynchronous processing
-   
+
 2. **Stateless Design**
    - Ephemeral compute instances
    - External state storage
@@ -100,22 +100,6 @@ These agents can:
    - Concurrent execution
    - Resource throttling
    - Usage metering
-
-### Deployment Models
-
-1. **Serverless Multi-tenant Architecture**
-   - Resource isolation
-   - Tenant-specific configurations
-   - Shared infrastructure efficiency
-   - Cost optimization
-   - Dynamic resource pooling
-   - Automatic instance lifecycle
-
-2. **Geographic Distribution**
-   - Region-specific deployment
-   - Data sovereignty compliance
-   - Latency optimization
-   - Disaster recovery
 
 ## Azure AI Agent Service Overview
 
@@ -246,7 +230,8 @@ The architectural advantages of AaaS will continue to evolve, enabling organizat
 - Optimize costs through efficient resource utilization
 - Accelerate innovation through standardized deployment patterns
 
-## AgentOnTheFly Pattern: On-the-Fly RAG and Code Generation
+
+## Agent On The Fly Project: On-the-Fly RAG and Code Generation
 
 The file `AgentOnTheFly.py` demonstrates a practical blueprint for embedding AI agents into a web application that combines retrieval-augmented generation (RAG) with on-the-fly code generation. This pattern works as follows:
 
