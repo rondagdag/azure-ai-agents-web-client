@@ -14,6 +14,8 @@ The concept of summoning specialized agents on demand has long captured our imag
 
 These cultural touchstones reflect our enduring fascination with the idea of specialized agents ready to tackle specific challenges at a moment's notice - a concept now becoming reality with AI.
 
+![Agents on the Fly - Combined Approach](Agents-on-the-fly-combo.png)
+
 ## The As-a-Service Evolution
 
 ### 1. Infrastructure as a Service (IaaS)
@@ -185,6 +187,46 @@ Azure AI Agent Service is a fully managed service that simplifies the developmen
    - Automatic scaling
    - Shared infrastructure
 
+
+## Agent On The Fly Project: On-the-Fly RAG and Code Generation
+
+The file `AgentOnTheFly.py` demonstrates a practical blueprint for embedding AI agents into a web application that combines retrieval-augmented generation (RAG) with on-the-fly code generation. This pattern works as follows:
+
+- **Dynamic Agent Instantiation**: Upon uploading a document, the application automatically instantiates an AI agent that creates a vector search index to extract contextual information from the file.
+- **Session-Based Context**: The agent establishes session context that preserves state during interaction, ensuring that relevant data is available throughout the conversation.
+- **On-the-Fly Code Generation**: By processing user instructions, the agent can generate and execute Python code in real time to perform analyses or create visual outputs.
+- **Automated Resource Cleanup**: After completing its task—such as downloading a generated image—the agent terminates, ensuring efficient resource management.
+
+This approach embodies an "agent for hire" model on the fly: you upload a document and the system dynamically creates the necessary backend processes to provide intelligent, context-aware assistance exactly when needed.
+
+### RAG Implementation
+
+![Agents on the Fly - RAG](Agents-on-the-fly-rag.png)
+
+The Retrieval-Augmented Generation capability allows agents to dynamically access and utilize knowledge from uploaded documents, enhancing their responses with contextual information.
+
+### Code Interpretation Capabilities
+
+![Agents on the Fly - Code Interpreter](Agents-on-the-fly-code-interpreter.png)
+
+The code interpretation feature allows AI agents to generate and execute Python code in real-time, enabling data analysis, visualization, and other programmatic tasks based on user requests.
+
+### Combined Approach: Code Interpretation + RAG
+
+![Agents on the Fly - Code Interpreter + RAG](Agents-on-the-fly-combo.png)
+
+This combined approach integrates both capabilities:
+- **Document Knowledge Access**: Agents can search and retrieve information from uploaded documents
+- **Live Code Execution**: Python code is generated and run in real-time 
+- **Data-Driven Analysis**: Perform analysis on document contents directly
+- **Interactive Visualizations**: Create charts and graphs based on document data
+- **Automated Problem Solving**: Generate solutions that combine document knowledge with computational capabilities
+
+## Getting Started
+
+Visit [GitHub repository](https://github.com/rondagdag/azure-ai-agents-web-client)
+
+
 ## The Future of As-a-Service Models
 
 The emergence of AaaS marks a new chapter in the as-a-service story:
@@ -230,14 +272,3 @@ The architectural advantages of AaaS will continue to evolve, enabling organizat
 - Optimize costs through efficient resource utilization
 - Accelerate innovation through standardized deployment patterns
 
-
-## Agent On The Fly Project: On-the-Fly RAG and Code Generation
-
-The file `AgentOnTheFly.py` demonstrates a practical blueprint for embedding AI agents into a web application that combines retrieval-augmented generation (RAG) with on-the-fly code generation. This pattern works as follows:
-
-- **Dynamic Agent Instantiation**: Upon uploading a document, the application automatically instantiates an AI agent that creates a vector search index to extract contextual information from the file.
-- **Session-Based Context**: The agent establishes session context that preserves state during interaction, ensuring that relevant data is available throughout the conversation.
-- **On-the-Fly Code Generation**: By processing user instructions, the agent can generate and execute Python code in real time to perform analyses or create visual outputs.
-- **Automated Resource Cleanup**: After completing its task—such as downloading a generated image—the agent terminates, ensuring efficient resource management.
-
-This approach embodies an "agent for hire" model on the fly: you upload a document and the system dynamically creates the necessary backend processes to provide intelligent, context-aware assistance exactly when needed.

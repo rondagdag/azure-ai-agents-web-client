@@ -42,8 +42,8 @@ if [ -f output.json ]; then
     # Process the discovery_url to extract the HostName
     HOST_NAME=$(echo "$DISCOVERY_URL" | sed -e 's|^https://||' -e 's|/discovery$||')
 
-    # Generate the PROJECT_CONNECTION_STRING
-    PROJECT_CONNECTION_STRING="\"$HOST_NAME;$SUBSCRIPTION_ID;$RESOURCE_GROUP_NAME;$AI_PROJECT_NAME\""
+    # Generate the AZURE_FOUNDRY_PROJECT_CONNSTRING
+    AZURE_FOUNDRY_PROJECT_CONNSTRING="\"$HOST_NAME;$SUBSCRIPTION_ID;$RESOURCE_GROUP_NAME;$AI_PROJECT_NAME\""
 
     ENV_FILE_PATH="../src/workshop/.env"
 
@@ -52,8 +52,8 @@ if [ -f output.json ]; then
 
     # Write to the .env file
     {
-      echo "PROJECT_CONNECTION_STRING=$PROJECT_CONNECTION_STRING"
-      echo "MODEL_DEPLOYMENT_NAME=\"$MODEL_NAME\""
+      echo "AZURE_FOUNDRY_PROJECT_CONNSTRING=$AZURE_FOUNDRY_PROJECT_CONNSTRING"
+      echo "AZURE_FOUNDRY_GPT_MODEL=\"$MODEL_NAME\""
     } > "$ENV_FILE_PATH"
 
     # Delete the output.json file

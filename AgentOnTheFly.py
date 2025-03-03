@@ -121,7 +121,7 @@ if "project_client" not in st.session_state:
 st.sidebar.title("Instructions:")
 st.sidebar.markdown(
     """
-    This Streamlit app for Azure AI Foundry's Agent Service. 
+    This Streamlit app for running Agent on the fly. 
 
     For source code, setup instructions and more details, visit the [GitHub repo](https://github.com/rondagdag/azure-ai-agents-web-client).
     """
@@ -523,10 +523,10 @@ def rag_with_code_interpreter(file_obj, prompt, conn_str=project_connstring, mod
         return f"An error occurred: {e}"
 
 # Main screen
-st.title("Azure AI Foundry's Agent Service")
+st.title("AI Agent on the Fly - Azure AI Foundry Agent Service")
 
 if menu == "Code Interpreter":
-    st.header("Solving challenging problems with sandboxed Python code")
+    st.header("Agent to write code and execute in sandboxed environment")
     default_prompt = """Could you please analyse the movies and box office gross using the following data and producing a bar chart image.
 
 Movie Title	Release Year	IMDb Rating	Rotten Tomatoes	Box Office Gross (USD)

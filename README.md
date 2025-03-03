@@ -25,10 +25,13 @@ Azure AI Agent Service enables developers to:
 
 ## Quick Start
 
-1. Follow the [Setup Guide](./docs/setup.md) to prepare your environment
+1. Follow the [Setup Guide](./docs/getting-started/setup.md) to prepare your environment
 2. Deploy the infrastructure using the provided scripts
 3. Configure your environment variables
 4. Run the sample agent application
+```shell
+> streamlit run AgentOnTheFly.py
+```
 
 ## Infrastructure
 
