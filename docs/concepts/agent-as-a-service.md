@@ -14,8 +14,6 @@ The concept of summoning specialized agents on demand has long captured our imag
 
 These cultural touchstones reflect our enduring fascination with the idea of specialized agents ready to tackle specific challenges at a moment's notice - a concept now becoming reality with AI.
 
-![Agents on the Fly - Combined Approach](Agents-on-the-fly-combo.png)
-
 ## The As-a-Service Evolution
 
 ### 1. Infrastructure as a Service (IaaS)
@@ -84,26 +82,7 @@ These agents can:
 - Integrate seamlessly with existing infrastructure
 - Self-heal and recover from failures
 
-## The Architecture of AaaS
-
-### Serverless Foundation
-
-1. **Message-Driven Core**
-   - Message-based agent activation
-   - Asynchronous processing
-
-2. **Stateless Design**
-   - Ephemeral compute instances
-   - External state storage
-   - Session management
-
-3. **Auto-scaling Infrastructure**
-   - Zero to N scaling
-   - Concurrent execution
-   - Resource throttling
-   - Usage metering
-
-## Azure AI Agent Service Overview
+# Azure AI Agent Service Overview
 
 Azure AI Agent Service is a fully managed service that simplifies the development, deployment, and scaling of AI agents. It eliminates the complexity of managing infrastructure while providing robust tools for building extensible AI agents.
 
@@ -187,8 +166,17 @@ Azure AI Agent Service is a fully managed service that simplifies the developmen
    - Automatic scaling
    - Shared infrastructure
 
+## Key Components
 
-## Agent On The Fly Project: On-the-Fly RAG and Code Generation
+Understanding these components is crucial for effective implementation:
+
+- **Agent**: The custom AI that utilizes AI models and tools
+- **Thread**: A conversation session between agent and user
+- **Message**: Content created by either agent or user
+- **Run**: The activation of an agent based on thread contents
+- **Tools**: Extensions that enhance agent capabilities
+
+# Agent On The Fly Project: On-the-Fly RAG and Code Generation
 
 The file `AgentOnTheFly.py` demonstrates a practical blueprint for embedding AI agents into a web application that combines retrieval-augmented generation (RAG) with on-the-fly code generation. This pattern works as follows:
 
@@ -225,6 +213,36 @@ This combined approach integrates both capabilities:
 ## Getting Started
 
 Visit [GitHub repository](https://github.com/rondagdag/azure-ai-agents-web-client)
+
+
+## Project Summary
+
+The Agent on the Fly project demonstrates the practical implementation of Agent as a Service (AaaS) principles through a streamlined, user-friendly interface. This project showcases:
+
+### Core Capabilities
+
+- **Document Intelligence**: Upload any document and instantly access an AI agent that can understand, analyze, and respond to questions about its contents
+- **Dynamic AI Agent Creation**: Agents are created on-demand, precisely when needed, and only exist for the duration of their task
+- **Serverless Architecture**: Built on Azure's serverless infrastructure for optimal resource utilization and scalability
+- **Combined RAG and Code Generation**: Unique integration of retrieval capabilities with real-time code execution
+- **Interactive Data Analysis**: Ask questions about your data and receive visual insights without writing a single line of code
+
+### Technical Implementation
+
+The project leverages several key technologies:
+- **Azure OpenAI Service**: Powers the underlying language model capabilities
+- **Azure AI Search**: Enables efficient vector search and document retrieval
+- **Python Runtime Environment**: Executes generated code within secure boundaries
+- **Web-based Interface**: Provides an intuitive entry point for users of all technical levels
+
+### Business Value
+
+This implementation demonstrates how organizations can:
+- Reduce time-to-insight for document analysis by 80%
+- Deploy specialized AI capabilities without dedicated infrastructure
+- Minimize operational costs through true pay-per-use architecture
+- Enable non-technical users to perform complex data analysis
+- Accelerate decision-making with instant access to document intelligence
 
 
 ## The Future of As-a-Service Models
